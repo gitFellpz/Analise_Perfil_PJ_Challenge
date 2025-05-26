@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Análise de Crédito PJ - Tech Solutions LTDA</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .chart-container {
+      width: 100%;
+      max-width: 400px;
+      margin: auto;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100">
+
+<div class="flex">
+  <!-- Sidebar -->
+  <aside class="bg-red-800 w-64 min-h-screen p-4 text-white">
+    <h1 class="text-xl font-bold mb-8">Santander Logo</h1>
+    <nav class="flex flex-col gap-4">
+      <a href="#" class="hover:text-red-300">Dashboard</a>
+      <a href="../clientes.html" class="hover:text-red-300">Clientes</a>
+      <a href="/index2.html" class="hover:text-red-300">Análises</a>
+      <a href="#" class="hover:text-red-300">Configurações</a>
+      <a href="#" class="hover:text-red-300">Sair</a>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="flex-1 p-6">
+    <header class="bg-red-700 text-white p-4 rounded mb-6">
+      <h2 class="text-2xl font-bold">Análise de Crédito PJ - Tech Solutions LTDA</h2>
+    </header>
+
+    <!-- Informações principais -->
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+      <div class="bg-white p-4 rounded shadow">
+        <h3 class="font-semibold mb-2">Identificação</h3>
+        <p><strong>Razão Social:</strong> Tech Solutions LTDA</p>
+        <p><strong>CNPJ:</strong> 12.345.678/0001-90</p>
+        <p><strong>Nome Fantasia:</strong> Tech Soluções</p>
+        <p><strong>Data de Abertura:</strong> 15/03/2018</p>
+      </div>
+
+      <div class="bg-white p-4 rounded shadow">
+        <h3 class="font-semibold mb-2">Informações Bancárias</h3>
+        <p><strong>Score Santander:</strong> 780</p>
+        <p><strong>Status:</strong> <span class="text-green-600 font-semibold">Ativo</span></p>
+        <p><strong>Classificação:</strong> <span class="inline-flex items-center gap-1"><span
+                class="bg-red-600 text-white px-2 py-0.5 rounded">B</span> Expansão</span></p>
+      </div>
+
+      <div class="bg-white p-4 rounded shadow">
+        <h3 class="font-semibold mb-2">Contato</h3>
+        <p><strong>Gerente:</strong> Ana Silva</p>
+        <p><strong>Relacionamento:</strong> 4 anos</p>
+        <p><strong>Inadimplência:</strong> Nenhuma</p>
+      </div>
+    </section>
+
+    <!-- Gráficos -->
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+      <div class="bg-white p-4 rounded shadow flex flex-col items-center">
+        <h2 class="font-semibold mb-2">Faturamento últimos 12 meses</h2>
+        <div class="chart-container">
+          <canvas id="graficoFaturamento"></canvas>
+        </div>
+      </div>
+
+      <div class="bg-white p-4 rounded shadow flex flex-col items-center">
+        <h2 class="font-semibold mb-2">Sazonalidade de Receita</h2>
+        <div class="chart-container">
+          <canvas id="graficoSazonalidade"></canvas>
+        </div>
+        <div class="text-sm mt-4">
+          <p><strong>Meses de maior faturamento:</strong> Novembro, Dezembro.</p>
+          <p><strong>Meses de maior risco:</strong> Janeiro, Fevereiro.</p>
+          <p><strong>Dependência Sazonal:</strong> Média.</p>
+        </div>
+      </div>
+
+      <div class="bg-white p-4 rounded shadow flex flex-col items-center">
+        <h2 class="font-semibold mb-2">Distribuição Regional</h2>
+        <div class="chart-container">
+          <canvas id="graficoDistribuicaoRegional"></canvas>
+        </div>
+        <div class="text-sm mt-4">
+          <p><strong>Insight:</strong></p>
+          <ul class="list-disc ml-5">
+            <li>55% da receita vem da região Sudeste.</li>
+            <li>Sul representa 20%.</li>
+            <li>Nordeste e Centro-Oeste: 15% e 7%.</li>
+            <li>Norte: 3%, oportunidade de expansão.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Informações Detalhadas (em blocos) -->
+    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
+      <div class="bg-white p-4 rounded shadow">
+        <h3 class="font-semibold mb-2">Análise Financeira</h3>
+        <p><strong>Saldo médio em conta:</strong> R$ 45.000,00</p>
+        <p><strong>Volume de operações de crédito:</strong> R$ 120.000,00</p>
+        <p><strong>Limite de crédito disponível:</strong> R$ 80.000,00</p>
+        <p><strong>Produtos contratados:</strong> Conta PJ, Capital de Giro, Máquina de Cartão, Seguros</p>
+        <p><strong>Risco de Crédito:</strong> Médio</p>
+      </div>
+
+      <div class="bg-white p-4 rounded shadow">
+        <h3 class="font-semibold mb-2">Indicadores de Performance</h3>
+        <p><strong>Crescimento anual de faturamento:</strong> +8%</p>
+        <p><strong>Evolução de vendas:</strong> +5%</p>
+        <p><strong>Margem de lucro operacional:</strong> 18%</p>
+        <p><strong>Comparativo:</strong> Acima da média do setor e região</p>
+      </div>
+
+      <div class="bg-white p-4 rounded shadow">
+        <h3 class="font-semibold mb-2">Relacionamento com o Banco</h3>
+        <p><strong>Tempo de relacionamento:</strong> 4 anos</p>
+        <p><strong>Histórico de inadimplência:</strong> Nenhum</p>
+        <p><strong>Taxa média de utilização dos produtos:</strong> 75%</p>
+      </div>
+
+      <div class="bg-white p-4 rounded shadow">
+        <h3 class="font-semibold mb-2">Documentação e Contratos</h3>
+        <p><strong>Contrato Social:</strong> Atualizado</p>
+        <p><strong>Alterações Contratuais:</strong> Atualizado</p>
+        <p><strong>Comprovantes:</strong> Pendências</p>
+      </div>
+
+      <div class="bg-white p-4 rounded shadow">
+        <h3 class="font-semibold mb-2">Fator Setorial</h3>
+        <p><strong>Ramo de Atividade:</strong> Varejo de Vestuário</p>
+        <p><strong>Desempenho do Setor no Brasil:</strong> +4.2%</p>
+        <p><strong>Comparativo:</strong> Acima da média regional</p>
+      </div>
+    </section>
+  </main>
+</div>
+
+<!-- Scripts dos Gráficos -->
+<script>
+  const ctx1 = document.getElementById('graficoFaturamento');
+  const ctx2 = document.getElementById('graficoSazonalidade');
+  const ctx3 = document.getElementById('graficoDistribuicaoRegional');
+
+  new Chart(ctx1, {
+    type: 'line',
+    data: {
+      labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+      datasets: [{
+        label: 'Faturamento (mil)',
+        data: [85, 88, 90, 93, 96, 100, 104, 110, 120, 130, 145, 150],
+        borderColor: 'rgb(220, 38, 38)',
+        backgroundColor: 'rgba(220, 38, 38, 0.2)',
+        tension: 0.3,
+        fill: true
+      }]
+    },
+    options: { responsive: true, plugins: { legend: { display: false } } }
+  });
+
+  new Chart(ctx2, {
+    type: 'bar',
+    data: {
+      labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+      datasets: [{
+        label: 'Receita',
+        data: [60, 65, 70, 75, 80, 85, 90, 95, 100, 110, 120, 130],
+        backgroundColor: 'rgb(220, 38, 38)'
+      }]
+    },
+    options: { responsive: true, plugins: { legend: { display: false } } }
+  });
+
+  new Chart(ctx3, {
+    type: 'doughnut',
+    data: {
+      labels: ['Sudeste', 'Sul', 'Nordeste', 'Centro-Oeste', 'Norte'],
+      datasets: [{
+        data: [55, 20, 15, 7, 3],
+        backgroundColor: [
+          'rgb(220, 38, 38)',
+          'rgb(239, 68, 68)',
+          'rgb(248, 113, 113)',
+          'rgb(252, 165, 165)',
+          'rgb(254, 202, 202)'
+        ],
+        borderColor: 'white',
+        borderWidth: 2
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: { legend: { position: 'bottom' } }
+    }
+  });
+</script>
+
+</body>
+
+</html>
